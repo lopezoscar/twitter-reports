@@ -25,7 +25,7 @@ public class BaseTest {
 	    	configOverrides.put("hibernate.connection.username","root");
 			configOverrides.put("hibernate.connection.password","admin");
 			configOverrides.put("hibernate.connection.url","jdbc:mysql://localhost:3306/twitterreports?autoReconnect=true");
-			configOverrides.put("hibernate.hbm2ddl.auto", "update");
+//			configOverrides.put("hibernate.hbm2ddl.auto", "update");
 			emFactory = Persistence.createEntityManagerFactory("twitterreports",configOverrides);
 			em = emFactory.createEntityManager();
 		} catch (Exception ex) {
