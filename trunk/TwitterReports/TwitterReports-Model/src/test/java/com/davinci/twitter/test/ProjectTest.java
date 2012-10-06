@@ -20,7 +20,6 @@ public class ProjectTest extends BaseTest{
 		List<Keyword> keywords = em.createQuery("Select k from Keyword k").getResultList();
 		project.setKeywords(keywords);
 		
-		em.persist(project);
 		
 		Assert.assertNotNull(project.getId());
 		

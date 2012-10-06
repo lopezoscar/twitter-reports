@@ -11,6 +11,7 @@ public class KeywordTest extends BaseTest{
 		Keyword keyword = new Keyword();
 		keyword.setName("Lanata");
 		em.persist(keyword);
+		System.out.println(keyword.getId());
 	}
 
 }
