@@ -14,5 +14,6 @@
   	<module>TwitterReports-Model</module>
   	<module>TwitterReports-DAO</module>
   	<module>TwitterReports-SOA</module>
+  	<module>TwitterReports-Jobs</module>
   </modules>
 </project>

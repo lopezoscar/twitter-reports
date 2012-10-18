@@ -1,6 +1,7 @@
 package com.davinci.twitter.dao.impl;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
@@ -49,6 +50,11 @@ public class ProjectBean implements ProjectManager{
 			PersistenceException {
 		em.remove(entity);
 		
+	}
+
+	@Transactional
+	public List<Project> getAllProjects() {
+		return em.createQuery("select p from Project").getResultList();
 	}
 
 }

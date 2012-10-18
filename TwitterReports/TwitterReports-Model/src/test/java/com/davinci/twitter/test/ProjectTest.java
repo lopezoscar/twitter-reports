@@ -15,11 +15,14 @@ public class ProjectTest extends BaseTest{
 	@Test
 	public void test(){
 		Project project = new Project();
-		project.setProjectName("Política");
+		project.setProjectName("PolÃ­tica");
 		project.setProjectAdd(new Date());
 		List<Keyword> keywords = em.createQuery("Select k from Keyword k").getResultList();
 		project.setKeywords(keywords);
 		
+		em.getTransaction().begin();
+		em.persist(project);
+		em.getTransaction().commit();
 		
 		Assert.assertNotNull(project.getId());
 		
