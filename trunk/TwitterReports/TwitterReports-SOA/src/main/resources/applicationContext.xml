@@ -22,7 +22,12 @@
 	</bean>
 	
 	
-<!-- 	<bean id="issuebean" class="com.sappe.ontrack.dao.springbeans.impl.IssueBean" /> -->
+	
+		<bean id="projectbean" class="com.davinci.twitter.dao.impl.ProjectBean" />
+		<bean id="errorbean" class="com.davinci.twitter.dao.impl.StatusBean" />
+		<bean id="twittersearchbean" class="com.davinci.twitter.dao.impl.TwitterSearchBean" />
+		<bean id="mongodbbean" class="com.davinci.twitter.dao.impl.MongoDBBean" />
+		<bean id="keywordbean" class="com.davinci.twitter.dao.impl.KeywordBean" />
 <!-- 	<bean id="userbean" class="com.sappe.ontrack.dao.springbeans.impl.UserBean"/> -->
 <!-- 	<bean id="rolebean" class="com.sappe.ontrack.dao.springbeans.impl.RoleBean"/> -->
 <!-- 	<bean id='issuestatusbean' class="com.sappe.ontrack.dao.springbeans.impl.IssueStatusBean"/> -->

@@ -23,7 +23,7 @@
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
-			<param-value>com.davinci.twitter.resources</param-value>
+			<param-value>com.davinci.twitter.services</param-value>
 		</init-param>
 		<init-param>
 			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
@@ -31,6 +31,20 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
+	<filter>
+		<filter-name>oemiv</filter-name>
+		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+		<init-param>
+			<param-name>entityManagerFactoryBeanName</param-name>
+			<param-value>entityManagerFactory</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>oemiv</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 <!-- 
 	<servlet>
 		<servlet-name>Jersey Web Application</servlet-name>
@@ -51,7 +65,5 @@
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
+	
 </web-app>
